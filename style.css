@@ -85,7 +85,7 @@ button.secondary { background: #00B4D8; color: white; }
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
-.reward-form input {
+.reward-form input, .quest-form input {
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 8px 12px;
