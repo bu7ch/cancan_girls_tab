@@ -1,3 +1,4 @@
+/* Body et titres */
 body { 
   font-family: "SF Pro Rounded", Arial, sans-serif; 
   background: #f9fafb;
@@ -8,18 +9,26 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 1.6em;
+  font-size: 1.8em;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
+h2 {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+
+/* Enfant */
 .child {
   background: white;
   border-radius: 20px;
   padding: 20px;
   margin: 15px 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: 0.2s;
 }
+.child:hover { transform: translateY(-2px); }
 
 .child h3 {
   text-align: center;
@@ -42,6 +51,7 @@ h1 {
 }
 .points.negative { color: #e74c3c; }
 
+/* Boutons et groupe */
 .btn-group {
   display: flex; 
   justify-content: center; 
@@ -59,34 +69,27 @@ button {
   transition: 0.2s;
 }
 
-button:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
+button:hover { transform: scale(1.05); opacity: 0.9; }
 
 button.primary { background: #6C63FF; color: white; }
 button.success { background: #4CAF50; color: white; }
 button.danger { background: #FF6B6B; color: white; }
 button.secondary { background: #00B4D8; color: white; }
 
+/* Rewards et Quests */
 .rewards, .quests {
   background: white;
   border-radius: 20px;
   padding: 20px;
   margin-top: 25px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.rewards h2, .quests h2 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
 .reward-form input {
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 8px 12px;
-  margin: 6px;
+  margin: 6px 0;
   font-size: 0.95em;
 }
 
@@ -99,6 +102,16 @@ button.secondary { background: #00B4D8; color: white; }
   justify-content: space-between;
   align-items: center;
 }
+
+/* Historique */
+.history {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+.history ul { padding-left: 20px; margin: 0; }
+.history li { margin: 4px 0; font-size: 0.9em; }
 
 /* Popup enfants */
 .popup {
@@ -117,11 +130,21 @@ button.secondary { background: #00B4D8; color: white; }
   padding:20px;
   border-radius:15px;
   text-align:center;
-  max-width:300px;
+  max-width:320px;
   width:90%;
 }
 
 .popup-content button {
   margin-top:10px;
   width:80%;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .btn-group { flex-direction: column; gap: 10px; }
+  .chart-container { width:120px; height:120px; }
 }
