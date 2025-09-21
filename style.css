@@ -7,17 +7,8 @@ body {
   color: #333;
 }
 
-h1 {
-  text-align: center;
-  font-size: 1.8em;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 1.4em;
-  margin-bottom: 15px;
-}
+h1 { text-align: center; font-size: 1.8em; font-weight: 600; margin-bottom: 20px; }
+h2 { font-size: 1.4em; margin-bottom: 15px; }
 
 /* Enfant */
 .child {
@@ -30,34 +21,15 @@ h2 {
 }
 .child:hover { transform: translateY(-2px); }
 
-.child h3 {
-  text-align: center;
-  font-size: 1.3em;
-  margin-bottom: 15px;
-}
+.child h3 { text-align: center; font-size: 1.3em; margin-bottom: 15px; }
 
-.chart-container {
-  width: 140px;
-  height: 140px;
-  margin: 0 auto;
-}
+.chart-container { width: 140px; height: 140px; margin: 0 auto; }
 
-.points {
-  text-align: center;
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-top: 10px;
-  color: #4CAF50;
-}
+.points { text-align: center; font-size: 1.2em; font-weight: bold; margin-top: 10px; color: #4CAF50; }
 .points.negative { color: #e74c3c; }
 
 /* Boutons et groupe */
-.btn-group {
-  display: flex; 
-  justify-content: center; 
-  gap: 12px; 
-  margin: 15px 0;
-}
+.btn-group { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin: 15px 0; }
 
 button {
   border: none;
@@ -68,7 +40,6 @@ button {
   cursor: pointer;
   transition: 0.2s;
 }
-
 button:hover { transform: scale(1.05); opacity: 0.9; }
 
 button.primary { background: #6C63FF; color: white; }
@@ -147,4 +118,13 @@ button.secondary { background: #00B4D8; color: white; }
 @media(max-width:600px){
   .btn-group { flex-direction: column; gap: 10px; }
   .chart-container { width:120px; height:120px; }
+  #addChildForm, .quest-form, .reward-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  #addChildForm input, .quest-form input, .reward-form input {
+    width: 100%;
+  }
+  .popup-content { width: 90%; }
 }
