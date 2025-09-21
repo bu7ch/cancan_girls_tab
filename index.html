@@ -21,18 +21,21 @@
 <div class="quests">
   <h2>Quêtes 🏆</h2>
   <ul id="questList" class="reward-list"></ul>
+  <div class="quest-form">
+    <input type="text" id="questName" placeholder="Nom de la quête">
+    <input type="number" id="questPoints" placeholder="Points" min="1">
+    <button class="secondary" onclick="addQuest()">Ajouter / Modifier Quête</button>
+  </div>
 </div>
 
 <div class="rewards">
   <h2>Récompenses 🎁</h2>
   <ul id="rewardList" class="reward-list"></ul>
-
   <div class="reward-form">
     <input type="text" id="rewardName" placeholder="Nom récompense">
     <input type="number" id="rewardCost" placeholder="Coût (pts)" min="1">
     <button class="secondary" onclick="addReward()">Ajouter récompense</button>
   </div>
-
   <button class="secondary" onclick="resetPoints()">🔄 Réinitialiser les points (vendredi)</button>
 </div>
 
